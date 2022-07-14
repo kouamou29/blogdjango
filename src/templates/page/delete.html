@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+
+
+
+{% block content %}
+  <div class="container mt-4 m-auto w-50">
+    <form class="m-auto" method="POST" action="">
+        {% csrf_token %}
+        <p>suprimer et retrouner sur la page d'acceil </p>
+       <button class="btn btn-danger" type="submit" value="submit">suprimer</button>
+    </form>
+  </div>
+{% endblock %}

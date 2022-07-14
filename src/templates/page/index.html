@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+
+   {% block content %}
+     <div class="container mt-3  " >
+
+          {% for post in posts %}
+
+        <div class="card mt-4 w-75 m-auto  shadow-sm p-3 mb-5 bg-body rounded" id="card" >
+         <div class="" >
+          {{post.name}}
+         </div>
+            <div class="card-body" >
+                <p>
+                    {{post.description}}
+                </p>
+                <a class="btn btn-primary shadow-sm" href="{% url  'formblog' %}">ajouter un blog</a>
+                 <a class="btn btn-info" href="{% url  'editblog' post.id %}">editer blog</a>
+                  <a class="btn btn-danger" href="{% url  'deleteblog' post.id %}">suprimer</a>
+            </div>
+        </div>
+     {% endfor%}
+     </div>
+   {% endblock %}
+
+
+
+
+<script>
+    let card = document.getElementByI('card')
+    console.log(card)
+</script>
